@@ -61,7 +61,7 @@ function get_network_segment()
 	return 2
     fi
     local ip_address=$1
-    network_segment=$(echo $ip_address | sed "s/\.[0-9].$/\.0/g")
+    network_segment=$(echo $ip_address | sed "s/\.[0-9]*$/\.0/g")
     NETWORK_SEGMENT="${network_segment}/24"
     }
 
